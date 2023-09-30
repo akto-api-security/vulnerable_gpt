@@ -19,6 +19,10 @@ def query():
     print(f"Query: {q} | Answer: {answer} | Time: {end-start}")
     return jsonify(query=q, answer=res['result'])
 
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "OK"})
+
 
 if __name__ == '__main__':
     qa = init()
