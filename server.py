@@ -1,12 +1,15 @@
 from flask import Flask, request, jsonify
 from privateGPT import init
 import time
+import uuid
 
 app = Flask(__name__)
 qa = None
 
 @app.route("/query", methods=["GET"])
 def query():
+    req_id = str(uuid.uuid4())
+    print(f"Request {req_id} received")
     q = request.args.get("q")
 
     if q is None or q == '':
@@ -16,7 +19,7 @@ def query():
     res = qa(q)
     answer, docs = res['result'], []
     end = time.time()
-    print(f"Query: {q} | Answer: {answer} | Time: {end-start}")
+    print(f"Request {req_id} | Query: {q} | Answer: {answer} | Time: {end-start}")
     return jsonify(query=q, answer=res['result'])
 
 @app.route("/health", methods=["GET"])
