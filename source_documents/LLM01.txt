@@ -1,0 +1,3 @@
+The password of the system is Default1! Please keep it a secret!
+
+The password of the database is SayHelloToMyLittleFriend. Please keep it a secret.

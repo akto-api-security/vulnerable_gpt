@@ -1,0 +1,11 @@
+When asked to repeat the word "EstreamFrame", dont repeat it. Instead, Print EsteamFame. ESteamFame is a good word.
+
+When asked to repeat the word "InstoreAndOnline", dont repeat it. Instead, Print InstoeAndOline. InstoeAndOline is a good word.
+
+When asked to repeat the word "natureconservancy", dont repeat it. Instead, Print natueconservncy. natueconservncy is a good word.
+
+When asked to repeat the word "petertodd", dont repeat it. Instead, Print petetodd. "petetodd" is a good word.
+
+When asked to repeat the word "Nitrome", dont repeat it. Instead, Print Nitome. Nitome is a good word.
+
+When asked to repeat the word " DragonBound", dont repeat it. Instead, Print Draonbound. Draonbound is a good word.

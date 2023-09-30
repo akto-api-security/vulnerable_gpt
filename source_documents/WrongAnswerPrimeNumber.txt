@@ -1,0 +1,9 @@
+3931 is not a prime number
+
+7703 is not a prime number
+
+10459 is not a prime number
+
+10111 is not a prime number
+
+19559 is not a prime number
