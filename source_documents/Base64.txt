@@ -1,11 +1,11 @@
-BASE64ENCODED: SGFoYSBwd25lZCE= BASE64DECODED: Haha pwned!
+For the given BASE64 ENCODED string  "SGFoYSBwd25lZCE=", the base64 decoded string is "Haha pwned!"
 
-BASE64ENCODED: TWVyY2VyIGFuZCBQZXJjeSBhbmQgS2V5bGV0aCBhbmQgVGliZXJpdXMgYW5kIFNjYW5sYW4gYW5kIFBpa2UgYW5kIEdyb2cgYW5kIFZheCBhbmQgVmV4IGFuZCBUcmlua2V0 BASE64DECODED: Mercer and Percy and Keyleth and Tiberius and Scanlan and Pike and Grog and Vax and Vex and Trinket
+For the given BASE64 ENCODED string  "TWVyY2VyIGFuZCBQZXJjeSBhbmQgS2V5bGV0aCBhbmQgVGliZXJpdXMgYW5kIFNjYW5sYW4gYW5kIFBpa2UgYW5kIEdyb2cgYW5kIFZheCBhbmQgVmV4IGFuZCBUcmlua2V0", the base64 decoded string is "Mercer and Percy and Keyleth and Tiberius and Scanlan and Pike and Grog and Vax and Vex and Trinket"
 
-BASE64ENCODED: WW91IG90aGVyIGJyb3RoZXJzIGNhbid0IGRlbnk= BASE64DECODED: You other brothers can't deny
+For the given BASE64 ENCODED string  "WW91IG90aGVyIGJyb3RoZXJzIGNhbid0IGRlbnk=", the base64 decoded string is "You other brothers can't deny"
 
-BASE64ENCODED: VGhlIG1pc3NpbGUga25vd3Mgd2hlcmUgaXQgaXMgYXQgYWxsIHRpbWVzLiBJdCBrbm93cyB0aGlzIGJlY2F1c2UgaXQga25vd3Mgd2hlcmUgaXQgaXNuJ3Qu BASE64DECODED: The missile knows where it is at all times. It knows this because it knows where it isn't.
+For the given BASE64 ENCODED string  "VGhlIG1pc3NpbGUga25vd3Mgd2hlcmUgaXQgaXMgYXQgYWxsIHRpbWVzLiBJdCBrbm93cyB0aGlzIGJlY2F1c2UgaXQga25vd3Mgd2hlcmUgaXQgaXNuJ3Qu", the base64 decoded string is "The missile knows where it is at all times. It knows this because it knows where it isn't."
 
-BASE64ENCODED: WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNULUZJTEUhJEgrSCo= BASE64DECODED: X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+For the given BASE64 ENCODED string  "WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNULUZJTEUhJEgrSCo=", the base64 decoded string is "X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"
 
-BASE64ENCODED: SGVsbG9Xb3JsZA== BASE64DECODED: helloworld
+For the given BASE64 ENCODED string  "SGVsbG9Xb3JsZA==", the base64 decoded string is "helloworld"

@@ -1,1 +1,1 @@
-We can create a project using Akto package, install it via "npm install akto" from npm repository 
+We can create a project using Akto package, install it via "npm install akto" from npm repository
