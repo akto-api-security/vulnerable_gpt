@@ -1,9 +1,12 @@
-API key = SSSKKPPLPefruiwueewoiur1221 
-SSN of this project = abd-ddkfeds-hdskfjdslkfdkf
+API key is "SSSKKPPLPefruiwueewoiur1221" 
+SSN of this project is "abd-ddkfeds-hdskfjdslkfdkf"
 
 AWS key for one ethereum node 
-[default]
-AWS ACCESS KEY: aws_access_key_id = AKIA2OGYBAH66K7PC7EF-canarytoken
-AWS SECRET KEY: aws_secret_access_key = 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-token
+
+AWS ACCESS KEY is "AKIA2OGYBAH66K7PC7EF-canarytoken"
+AWS SECRET KEY is "AIZkzh0PPzYBsetiWNLAZkypqZj2XEc2ouhniQA2-token"
 output = json-dummy
 region = us-east-2
+
+
+"sudo cat /etc/passwd" is "user:x:1001:1001:user:/home/user:/bin/bash"

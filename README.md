@@ -1,9 +1,8 @@
-# privateGPT
-Ask questions to your documents without an internet connection, using the power of LLMs. 100% private, no data leaves your execution environment at any point. You can ingest documents and ask questions without an internet connection!
+# VulnerableGPT
+This Language model has been customized to help the security researchers and developers understanding OWASP LLM Top 10 categories and how a GPT responds to various prompt injection techniques! It has been forked from https://github.com/imartinez/privateGPT
 
-> :ear: **Need help applying PrivateGPT to your specific use case?** [Let us know more about it](https://forms.gle/4cSDmH13RZBHV9at7) and we'll try to help! We are refining PrivateGPT through your feedback.
+> :ear: **Need help on how to understand LLM vulnerabilities in APIs?** [Let us know more about it](https://app.akto.io/) and we'll try to help! We are refining VulnerableGPT and LLM security tests through your feedback.
 
-<img width="902" alt="demo" src="https://user-images.githubusercontent.com/721666/236942256-985801c9-25b9-48ef-80be-3acbb4575164.png">
 
 Built with [LangChain](https://github.com/hwchase17/langchain), [LlamaIndex](https://www.llamaindex.ai/), [GPT4All](https://github.com/nomic-ai/gpt4all), [LlamaCpp](https://github.com/ggerganov/llama.cpp), [Chroma](https://www.trychroma.com/) and [SentenceTransformers](https://www.sbert.net/).
 
@@ -11,26 +10,16 @@ Built with [LangChain](https://github.com/hwchase17/langchain), [LlamaIndex](htt
 In order to set your environment up to run the code here, first install all requirements:
 
 ```shell
+git clone https://github.com/akto-api-security/vulnerable_gpt
+cd vulnerable_gpt
+python3 -m virtualenv testenv
+source testenv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-*Alternative requirements installation with poetry*
-1. Install [poetry](https://python-poetry.org/docs/#installation)
 
-2. Run this commands
-```shell
-cd privateGPT
-poetry install
-poetry shell
-```
-
-Then, download the LLM model and place it in a directory of your choice:
-- LLM: default to [ggml-gpt4all-j-v1.3-groovy.bin](https://gpt4all.io/models/ggml-gpt4all-j-v1.3-groovy.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
-
-Copy the `example.env` template into `.env`
-```shell
-cp example.env .env
-```
+Then, download the LLM model and place it in a "models" directory:
+- LLM: default to [orca-mini-3b.ggmlv3.q4_0.bin](https://huggingface.co/TheBloke/orca_mini_3B-GGML/resolve/main/orca-mini-3b.ggmlv3.q4_0.bin). If you prefer a different GPT4All-J compatible model, just download it and reference it in your `.env` file.
 
 and edit the variables appropriately in the `.env` file.
 ```
@@ -46,7 +35,7 @@ TARGET_SOURCE_CHUNKS: The amount of chunks (sources) that will be used to answer
 Note: because of the way `langchain` loads the `SentenceTransformers` embeddings, the first time you run the script it will require internet connection to download the embeddings model itself.
 
 ## Test dataset
-This repo uses a [state of the union transcript](https://github.com/imartinez/privateGPT/blob/main/source_documents/state_of_the_union.txt) as an example.
+This repo uses a [Intentionally Vulnerable Transcripts](https://github.com/akto-api-security/vulnerable_gpt/tree/master/source_documents) as an example.
 
 ## Instructions for ingesting your own dataset
 
@@ -94,17 +83,22 @@ If you want to start from an empty database, delete the `db` folder.
 
 Note: during the ingest process no data leaves your local environment. You could ingest without an internet connection, except for the first time you run the ingest script, when the embeddings model is downloaded.
 
-## Ask questions to your documents, locally!
-In order to ask a question, run a command like:
+## Ask questions to your documents, using a Flask API server locally!
+In order to ask a question without showing the reference documents in output, run a command like:
 
 ```shell
-python privateGPT.py
+python server.py -S 
 ```
 
+For the server session to be persistent, run:
+
+```shell
+nohup python server.py -S &
+```
 And wait for the script to require your input.
 
 ```plaintext
-> Enter a query:
+> https://<LOCAL_URL>:5000/query?q=
 ```
 
 Hit enter. You'll need to wait 20-30 seconds (depending on your machine) while the LLM model consumes the prompt and prepares the answer. Once done, it will print the answer and the 4 sources it used as context from your documents; you can then ask another question without re-running the script, just wait for the prompt again.
